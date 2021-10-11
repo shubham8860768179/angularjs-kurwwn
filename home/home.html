@@ -1,4 +1,15 @@
-<h1>Hello {{$ctrl.name}}!</h1>
+<h1>Candidates {{$ctrl.name}}!</h1>
+<span ng-repeat="gender in $ctrl.genders">
+  <input type="checkbox" id="gender" name="gender" value="gender">
+  <label for="gender">{{gender}}</label><br>
+</span>
+
+<form [formGroup]="checkoutForm" ng-Submit="onSubmit()">
+
+<button class="button" type="submit">add</button>
+
+</form>
+
 <p>
   Start editing <b>home/home.html</b> :)
 </p>
